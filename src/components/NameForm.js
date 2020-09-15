@@ -1,4 +1,5 @@
 import React, {useState, useContext} from "react";
+import { useHistory } from 'react-router-dom'
 import {GlobalContext} from "../context/GlobalState";
 
 export const NameForm = () => {
@@ -8,11 +9,13 @@ export const NameForm = () => {
     const {inputFirstName} = useContext(GlobalContext);
     const {inputLastName} = useContext(GlobalContext);
 
+    const history = useHistory();
 
     const onSumbit = e => {
         e.preventDefault();
         inputFirstName(firstName);
         inputLastName(lastName);
+        history.push("/choisirSexe");
     }
 
     return(

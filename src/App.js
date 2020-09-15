@@ -6,17 +6,21 @@ import {TopNav} from "./components/layout/TopNav";
 import {LeftNav} from "./components/layout/LeftNav";
 import {NameForm} from "./components/NameForm";
 import {GlobalProvider} from "./context/GlobalState";
+import {SexForm} from "./components/SexForm";
 
 function App() {
   return (
       <GlobalProvider>
-      <Router>
+          <Router>
         <div className="App">
           <TopNav/>
           <div className={"row"}>
           <LeftNav/>
           <div className={"container"}>
-            <NameForm/>
+
+            <Route path={"/saisirNom"} component={NameForm}/>
+            <Route path={"/choisirSexe"} component={SexForm}/>
+
           </div>
           </div>
         </div>

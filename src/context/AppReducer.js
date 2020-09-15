@@ -15,7 +15,6 @@ export default (state, action) => {
                 ...state,
                 patient: {isFemale: action.payload }
             }
-
         default:
             return state;
     }
