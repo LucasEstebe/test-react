@@ -1,11 +1,16 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route} from 'react-router-dom'
+
+import {TopNav} from "./layout/TopNav";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Placeholder</h1>
-    </div>
+      <Router>
+        <div className="App">
+          <TopNav/>
+        </div>
+      </Router>
   );
 }
 
