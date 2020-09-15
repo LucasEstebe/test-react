@@ -1,18 +1,23 @@
 import React from 'react'
-import { BrowserRouter as Router, Route} from 'react-router-dom'
-import { Link} from "react-router-dom";
 
 export const LeftNav = () => {
+    const leftNavStyle = {
+        height: "95vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between"
+    }
+
     return (
-        <div className="bg-light border-right col-1" id="sidebar-wrapper">
-            <ul className="list-group list-group-flush">
-                <li className="list-group-item list-group-item-action bg-light">Dashboard</li>
-                <li className="list-group-item list-group-item-action bg-light">Dashboard</li>
-                <li className="list-group-item list-group-item-action bg-light">Dashboard</li>
+        <div className="bg-light border-right col-1" style={leftNavStyle}>
+            <ul className="list-group list-group-flush pt-2">
+                <li className="list-group-item list-group-item-action bg-light">Lien</li>
+                <li className="list-group-item list-group-item-action bg-light">Lien</li>
+                <li className="list-group-item list-group-item-action bg-light">Lien</li>
             </ul>
-            <ul className="list-group list-group-flush">
-                <li className="list-group-item list-group-item-action bg-light">Dashboard</li>
-                <li className="list-group-item list-group-item-action bg-light">Dashboard</li>
+            <ul className="list-group list-group-flush pb-3">
+                <li className="list-group-item list-group-item-action bg-light">Lien</li>
+                <li className="list-group-item list-group-item-action bg-light">Lien</li>
             </ul>
         </div>
     );
