@@ -33,6 +33,7 @@ export const GlobalProvider = ({children}) => {
 
     return (<GlobalContext.Provider value={
         {
+            patient: state.patient,
             inputFirstName,
             inputLastName,
             chooseFemale,

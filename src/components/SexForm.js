@@ -4,8 +4,14 @@ import {useHistory} from "react-router-dom";
 
 export const SexForm = () => {
     const {chooseFemale} = useContext(GlobalContext);
+    const {patient} = useContext(GlobalContext);
+    console.log(patient)
 
     const history = useHistory();
+
+    if (!patient.firstName || !patient.lastName){
+        history.push("/saisirNom");
+    }
 
     const onSelect = e => {
         chooseFemale(e.target.value);

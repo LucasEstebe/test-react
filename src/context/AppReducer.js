@@ -3,17 +3,18 @@ export default (state, action) => {
         case "INPUT_FIRSTNAME":
             return {
                 ...state,
-                patient: {firstName: action.payload }
+                patient: {...state.patient, firstName: action.payload}
             }
+
         case "INPUT_LASTNAME":
             return {
                 ...state,
-                patient: {lastName: action.payload }
+                patient: {...state.patient, lastName: action.payload}
             }
         case "CHOOSE_SEX":
             return {
                 ...state,
-                patient: {isFemale: action.payload }
+                patient: {...state.patient, isFemale: action.payload }
             }
         default:
             return state;

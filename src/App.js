@@ -7,6 +7,7 @@ import {LeftNav} from "./components/layout/LeftNav";
 import {NameForm} from "./components/NameForm";
 import {GlobalProvider} from "./context/GlobalState";
 import {SexForm} from "./components/SexForm";
+import {Patient} from "./components/Patient";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
 
             <Route path={"/saisirNom"} component={NameForm}/>
             <Route path={"/choisirSexe"} component={SexForm}/>
+            <Route path={"/afficherPatient"} component={Patient}/>
 
           </div>
           </div>
