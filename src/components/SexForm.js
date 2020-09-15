@@ -18,6 +18,10 @@ export const SexForm = () => {
         history.push("/afficherPatient");
     }
 
+    const retour = () => {
+        history.push("/saisirNom");
+    }
+
     return(
         <React.Fragment>
             <h3 className={"my-5 mx-auto text-center"}>Peux-tu indiquer son sexe?</h3>
@@ -25,6 +29,7 @@ export const SexForm = () => {
             <button type="button" className="btn btn-outline-primary mx-5 btn-lg" value={false} onClick={onSelect}>Homme</button>
             <button type="button" className="btn btn-outline-primary mx-5 btn-lg" value={true} onClick={onSelect}>Femme</button>
             </div>
+            <button type="button" className="btn btn-danger mt-5-5 btn-sm" onClick={retour}>Retour</button>
         </React.Fragment>
     )
 }
